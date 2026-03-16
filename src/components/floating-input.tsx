@@ -21,7 +21,6 @@ interface IFloatingInputProps extends ChatInput.IProps {
 
 export const FloatingInput: React.FC<IFloatingInputProps> = ({
   model,
-  toolbarRegistry,
   onClose,
   onCancel,
   updatePosition,
@@ -120,11 +119,7 @@ export const FloatingInput: React.FC<IFloatingInputProps> = ({
           </Button>
         </div>
         <div ref={inputRef} className="floating-input-body">
-          <ChatInput
-            model={model}
-            toolbarRegistry={toolbarRegistry}
-            onCancel={onCancel}
-          />
+          <ChatInput model={model} onCancel={onCancel} />
         </div>
       </div>
     </JlThemeProvider>
